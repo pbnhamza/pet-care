@@ -1,8 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: light --default;
+}
 
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #8cc63e;
+  --color-secondary: #0b9444;
+  --color-content: #db89ca;
+  --color-base-100: #b1b2ab;
+  --color-base-200: #f4f4f7;
+  --color-base-300: #19063d;
+  --color-accent: #484548;
+}
 * {
   font-family: "Poppins";
 }

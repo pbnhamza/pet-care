@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Emily Carter",
+    "title": "Lead Veterinarian",
+    "specialty": "Small Animal Medicine & Surgery",
+    "experience_years": 12,
+    "bio": "Dr. Carter graduated from Cornell University College of Veterinary Medicine and has a passion for preventive care and emergency surgery.",
+    "image": "https://i.ibb.co.com/q3GWfGcQ/vet1.jpg",
+    "email": "emily@vetclinic.com",
+    "phone": "(555) 123-4567"
+  },
+  {
+    "id": 2,
+    "name": "Dr. Michael Rodriguez",
+    "title": "Exotic Animal Specialist",
+    "specialty": "Avian & Reptile Care",
+    "experience_years": 8,
+    "bio": "With expertise in non-traditional pets, Dr. Rodriguez ensures exotic animals receive tailored, high-quality treatment.",
+    "image": "https://i.ibb.co.com/JWsX7dvL/vet4.jpg",
+    "email": "michael@vetclinic.com",
+    "phone": "(555) 123-4568"
+  },
+  {
+    "id": 3,
+    "name": "Dr. Sarah Lee",
+    "title": "Chief of Staff",
+    "specialty": "Dermatology & Preventive Wellness",
+    "experience_years": 15,
+    "bio": "Dr. Lee focuses on skin conditions and holistic wellness plans to keep your pets healthy year-round.",
+    "image": "https://i.ibb.co.com/mrS6nPZg/vet5.jpg",
+    "email": "sarah@vetclinic.com",
+    "phone": "(555) 123-4569"
+  }
+]

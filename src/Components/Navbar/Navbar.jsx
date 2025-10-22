@@ -1,16 +1,13 @@
 import { NavLink } from "react-router";
 import MyContainer from "../MyContainer/MyContainer";
 import logo from "../../assets/logo.jpeg";
+import login from "../../assets/login.png";
+import MyLink from "../MyLink/MyLink";
 
 const Navbar = () => {
-  const links = [
-    <NavLink>Home</NavLink>,
-    <NavLink> Services</NavLink>,
-    <NavLink> My Profile</NavLink>,
-  ];
   return (
     <MyContainer>
-      <div className="navbar bg-[#000000] shadow-sm sticky ">
+      <div className="navbar bg-base-200 shadow-sm sticky py-5 ">
         <div className="navbar-start">
           <div className="dropdown text-white">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -31,31 +28,32 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex="-1"
-              className="menu text-white font-semibold menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu text-secondary font-semibold menu-sm dropdown-content   z-1 mt-3 w-52 p-2 shadow"
             >
-              {links.map((link, i) => (
-                <li key={i}>{link}</li>
-              ))}
+              <MyLink to={"/"}>Home</MyLink>
+              <MyLink to={"/services"}>Services</MyLink>
+              <MyLink to={"/profile"}>My Profile</MyLink>
             </ul>
           </div>
-          <NavLink className="flex justify-between items-center gap-2">
+          <NavLink to={"/"} className="flex justify-between items-center gap-2">
             <img
               className="w-[40px] h-[40px] rounded-full"
               src={logo}
               alt="logo"
             />
-            <p className="font-bold text-white text-xl">Pet Care</p>
+            <p className="font-bold text-primary  text-xl">Pet Care</p>
           </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-white font-semibold">
-            {links.map((link, i) => (
-              <li key={i}>{link}</li>
-            ))}
+          <ul className="gap-4 menu-horizontal px-1 text-secondary font-semibold">
+            <MyLink to={"/"}>Home</MyLink>
+            <MyLink to={"/services"}>Services</MyLink>
+            <MyLink to={"/profile"}>My Profile</MyLink>
           </ul>
         </div>
-        <div className="navbar-end">
-          <NavLink className="btn bg-[#37BC9B]">Login</NavLink>
+        <div className="navbar-end flex gap-2 items-center ">
+          <img className="w-[40px] h-[40px]" src={login} alt="" />
+          <NavLink className="btn bg-secondary text-white">Login</NavLink>
         </div>
       </div>
     </MyContainer>

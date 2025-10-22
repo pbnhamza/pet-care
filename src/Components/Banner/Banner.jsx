@@ -1,6 +1,6 @@
 import React from "react";
 import { SwiperSlide } from "swiper/react";
-import slide from "../../assets/error-404.png";
+
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper } from "swiper/react";
 import "./Banner.css";
@@ -24,7 +24,7 @@ const Banner = () => {
           autoplay={{ delay: 1000, disableOnInteraction: false }}
           loop={true}
           speed={5000}
-          className="h-[400px]"
+          className="h-[480px]"
         >
           <SwiperSlide>
             <img className="w-full h-full" src={slide1} alt="" />

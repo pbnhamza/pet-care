@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Keep Pets Warm Indoors",
+    "summary": "Provide warm bedding and keep your pets away from cold drafts.",
+    "details": "Use cozy blankets or pet-safe heated beds, especially for older or short-haired pets. Avoid leaving pets in cold garages .",
+    "image": "https://i.ibb.co.com/FktHsF8t/lbvmc-keeping-your-furry-friend-warm.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Protect Their Paws",
+    "summary": "Clean paws after outdoor walks to remove ice and salt.",
+    "details": "Snow, ice, and road salt can damage paw pads. Use a damp towel to clean paws and apply paw balm to prevent dryness or cracks.",
+    "image": "https://i.ibb.co.com/sdKK7dw1/Protect-Their-Paws.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Keep Fresh Water Available",
+    "summary": "Check your pet’s water bowl frequently to ensure it’s not frozen.",
+    "details": "Pets may drink less if the water is too cold or frozen. Use a heated water bowl or refresh water regularly to keep them hydrated.",
+    "image": "https://i.ibb.co.com/vCwv2RGq/Keep-Fresh-Water-Available.jpg"
+  }
+]
