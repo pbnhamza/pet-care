@@ -1,15 +1,16 @@
-import React from "react";
-import Navbar from "../Components/Navbar/Navbar";
 import { Outlet } from "react-router";
 import Footer from "../Components/Footer/Footer";
+import Banner from "../Components/Banner/Banner";
+import Navbar from "../Components/Navbar/Navbar";
 
 const MainLayouts = () => {
   return (
     <div>
       <header>
         <Navbar></Navbar>
+        <Banner></Banner>
       </header>
-      <main className="min-h-[calc(100vh-294px)]">
+      <main>
         <Outlet></Outlet>
       </main>
       <footer>
