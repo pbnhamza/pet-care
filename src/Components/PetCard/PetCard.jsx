@@ -2,7 +2,8 @@ import React from "react";
 import { NavLink } from "react-router";
 
 const PetCard = ({ pet }) => {
-  const { image, serviceName, rating, price } = pet;
+  const { image, serviceName, rating, price, serviceId } = pet;
+
   return (
     <div>
       <div className=" shadow-sm p-2 rounded-xl space-y-4 hover:scale-105 transition ease-in-out">
@@ -24,7 +25,10 @@ const PetCard = ({ pet }) => {
           </div>
         </div>
         <div className="flex justify-center">
-          <NavLink className="btn  bg-secondary text-white">
+          <NavLink
+            to={`/services/${serviceId}`}
+            className="btn  bg-secondary text-white"
+          >
             View Details
           </NavLink>
         </div>

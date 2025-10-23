@@ -3,9 +3,9 @@ import MainLayouts from "../Layouts/MainLayouts";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home";
 import Loader from "../Components/Loader/Loader";
-import PetCard from "../Components/PetCard/PetCard";
-import Tips from "../Components/Tips/Tips";
 import Services from "../Pages/Services/Services";
+import Profile from "../Pages/Profile/Profile";
+import Login from "../Pages/Login/Login";
 
 const router = createBrowserRouter([
   {
@@ -20,12 +20,17 @@ const router = createBrowserRouter([
         loader: () => fetch("/pets.json"),
       },
       {
-        path: "/services",
+        path: "/services/:id",
         Component: Services,
+        loader: () => fetch("/pets.json"),
       },
       {
         path: "/profile",
-        Component: Services,
+        Component: Profile,
+      },
+      {
+        path: "/login",
+        Component: Login,
       },
     ],
   },

@@ -31,7 +31,7 @@ const Navbar = () => {
               className="menu text-secondary font-semibold menu-sm dropdown-content   z-1 mt-3 w-52 p-2 shadow"
             >
               <MyLink to={"/"}>Home</MyLink>
-              <MyLink to={"/services"}>Services</MyLink>
+              <MyLink to={"/services/:id"}>Services</MyLink>
               <MyLink to={"/profile"}>My Profile</MyLink>
             </ul>
           </div>
@@ -47,13 +47,15 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="gap-4 menu-horizontal px-1 text-secondary font-semibold">
             <MyLink to={"/"}>Home</MyLink>
-            <MyLink to={"/services"}>Services</MyLink>
+            <MyLink to={"/services/:id"}>Services</MyLink>
             <MyLink to={"/profile"}>My Profile</MyLink>
           </ul>
         </div>
         <div className="navbar-end flex gap-2 items-center ">
           <img className="w-[40px] h-[40px]" src={login} alt="" />
-          <NavLink className="btn bg-secondary text-white">Login</NavLink>
+          <NavLink to={"/login"} className="btn bg-secondary text-white">
+            Login
+          </NavLink>
         </div>
       </div>
     </MyContainer>
