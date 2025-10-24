@@ -3,8 +3,23 @@ import MyContainer from "../MyContainer/MyContainer";
 import logo from "../../assets/logo.jpeg";
 import login from "../../assets/login.png";
 import MyLink from "../MyLink/MyLink";
+import { useContext } from "react";
+import { AuthContext } from "../../Context/AuthContext";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
+  const { user, signOutFunc, setUser } = useContext(AuthContext);
+  console.log(user);
+  const handelSignout = () => {
+    signOutFunc()
+      .then(() => {
+        toast.success("SignOut successful");
+        setUser(null);
+      })
+      .catch((e) => {
+        toast.error(e.message);
+      });
+  };
   return (
     <MyContainer>
       <div className="navbar bg-base-200 shadow-sm sticky py-5 ">
@@ -52,10 +67,32 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end flex gap-2 items-center ">
-          <img className="w-[40px] h-[40px]" src={login} alt="" />
-          <NavLink to={"/login"} className="btn bg-secondary text-white">
-            Login
-          </NavLink>
+          {user ? (
+            <div className="flex justify-center items-center gap-5">
+              <div>
+                <img
+                  className="w-[40px] h-[40px] rounded-full"
+                  src={user?.photoURL}
+                  alt=""
+                />
+              </div>
+              <div className="flex justify-center py-4">
+                <button
+                  onClick={handelSignout}
+                  className="btn btn-primary bg-secondary"
+                >
+                  SignOut
+                </button>
+              </div>
+            </div>
+          ) : (
+            <div className="flex justify-center items-center gap-5">
+              <img className="w-[40px] h-[40px]" src={login} alt="" />
+              <NavLink to={"/login"} className="btn bg-secondary text-white">
+                Login
+              </NavLink>
+            </div>
+          )}
         </div>
       </div>
     </MyContainer>
