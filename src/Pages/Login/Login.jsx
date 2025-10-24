@@ -1,36 +1,65 @@
+import { useState } from "react";
+import { FaEye } from "react-icons/fa";
+import { IoEyeOff } from "react-icons/io5";
 import MyContainer from "../../Components/MyContainer/MyContainer";
+import { Link } from "react-router";
 
 const Login = () => {
+  const [show, setShow] = useState(false);
   return (
     <MyContainer>
-      <div className="hero bg-purple-950 min-h-screen ">
+      <div
+        className="hero min-h-screen "
+        style={{
+          background:
+            "linear-gradient(90deg,rgba(42, 151, 155, 0.5) 0%, rgba(11, 148, 68, 0.25) 60%, rgba(83, 237, 198, 0.45) 100%)",
+        }}
+      >
         <div className="flex flex-col justify-center items-center ">
-          <div className="text-center ">
-            <h1 className="text-5xl font-bold text-white">Login now!</h1>
-            <p className="py-6 text-white">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
+          <div className="text-center py-10 ">
+            <h1 className="text-5xl font-bold text-[#0B9444]">
+              Welcome to website
+            </h1>
           </div>
-          <div className="card bg-gray-300 w-full max-w-sm shrink-0 shadow-2xl">
-            <div className="card-body text-white">
-              <fieldset className="fieldset">
-                <label className="label">Email</label>
-                <input type="email" className="input" placeholder="Email" />
-                <label className="label">Password</label>
+          <div className="card bg-white w-96 max-w-sm shrink-0 shadow-2xl">
+            <div
+              className="card-body rounded "
+              style={{
+                background:
+                  "linear-gradient(90deg,rgba(42, 151, 155, 0.15) 0%, rgba(11, 148, 68, 0.25) 56%, rgba(83, 237, 198, 0.45) 100%)",
+              }}
+            >
+              <fieldset className="fieldset relative">
+                <label className="label text-base-300">Email</label>
                 <input
-                  type="password"
-                  className="input"
-                  placeholder="Password"
+                  type="email"
+                  className="input text-base-300 "
+                  placeholder="YourEmail"
                 />
+                <label className="label text-base-300">Password</label>
+                <input
+                  type={show ? "text " : "password"}
+                  className="input text-base-300 "
+                  placeholder="*******"
+                />
+                <span
+                  onClick={() => setShow(!show)}
+                  className="absolute right-[30px] top-[112px] cursor-pointer  z-50"
+                >
+                  {show ? <FaEye /> : <IoEyeOff />}
+                </span>
                 <div>
                   <a className="link link-hover">Forgot password?</a>
                 </div>
-                <button className="btn btn-neutral border-none bg-base-content mt-4">
+                <button className="btn btn-neutral border-none bg-[#0B9444] mt-4">
                   Login
                 </button>
               </fieldset>
+              <div className="flex items-center justify-center gap-2 my-2">
+                <div className="h-px w-16 bg-base-300/30"></div>
+                <span className="text-sm text-base-300/70">or</span>
+                <div className="h-px w-16  bg-base-300/30"></div>
+              </div>
               <button className="btn bg-white text-black border-[#e5e5e5]">
                 <svg
                   aria-label="Google logo"
@@ -61,6 +90,17 @@ const Login = () => {
                 </svg>
                 Login with Google
               </button>
+              <div>
+                <h1 className="py-2">
+                  You have Login Please{" "}
+                  <Link
+                    to={"/register"}
+                    className="text-base-300 font-semibold cursor-pointer "
+                  >
+                    register...
+                  </Link>
+                </h1>
+              </div>
             </div>
           </div>
         </div>

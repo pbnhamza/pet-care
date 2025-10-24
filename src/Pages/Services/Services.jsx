@@ -21,15 +21,15 @@ const Services = () => {
         }}
       >
         {cards.length === 0 ? (
-          <div className="flex justify-center items-center h-screen">
+          <div className="flex justify-center items-center min-h-screen ">
             <div>
               <PropagateLoader
                 className="text-center py-8"
-                color="#FFFFFF"
+                color=" #0b9444"
               ></PropagateLoader>
               <Link
                 to={"/"}
-                className="text-white font-bold text-3xl mt-10 cursor-pointer hover:border-b"
+                className="text-secondary font-bold  text-xl md:text-4xl mt-10 cursor-pointer hover:border-b"
               >
                 Please Click the view details Button
               </Link>

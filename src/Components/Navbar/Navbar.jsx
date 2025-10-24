@@ -9,7 +9,7 @@ const Navbar = () => {
     <MyContainer>
       <div className="navbar bg-base-200 shadow-sm sticky py-5 ">
         <div className="navbar-start">
-          <div className="dropdown text-white">
+          <div className="dropdown text-secondary">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex="-1"
-              className="menu text-secondary font-semibold menu-sm dropdown-content   z-1 mt-3 w-52 p-2 shadow"
+              className="menu  font-semibold menu-sm dropdown-content bg-secondary text-white z-1 mt-3 w-[100px] p-2 shadow"
             >
               <MyLink to={"/"}>Home</MyLink>
               <MyLink to={"/services/:id"}>Services</MyLink>

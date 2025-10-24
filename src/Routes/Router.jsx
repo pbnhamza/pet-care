@@ -6,6 +6,7 @@ import Loader from "../Components/Loader/Loader";
 import Services from "../Pages/Services/Services";
 import Profile from "../Pages/Profile/Profile";
 import Login from "../Pages/Login/Login";
+import Register from "../Pages/Login/Register";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         Component: Login,
+      },
+      {
+        path: "/register",
+        Component: Register,
       },
     ],
   },
