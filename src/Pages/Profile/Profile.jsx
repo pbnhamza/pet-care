@@ -1,6 +1,7 @@
 import React from "react";
 import MyContainer from "../../Components/MyContainer/MyContainer";
 import image from "../../assets/login.png";
+import { Link } from "react-router";
 
 const Profile = () => {
   return (
@@ -28,24 +29,24 @@ const Profile = () => {
           <div className=" bg-primary rounded space-y-2 p-4 w-[400px] ">
             <div className="flex justify-center items-center gap-5 text-xl">
               <div>
-                <h1 className="font-semibold text-white py-2 text-right">
-                  User Name:
+                <h1 className="font-semibold text-white py-1 text-right">
+                  Name:
                 </h1>
-                <h1 className="font-semibold text-white py-2 text-right">
+                <h1 className="font-semibold text-white py-1 text-right">
                   Email:
                 </h1>
               </div>
               <div>
-                <h1 className="font-semibold text-white py-2">hamza</h1>
-                <h1 className="font-semibold text-white py-2">
+                <h1 className="font-semibold text-white py-1">hamza</h1>
+                <h1 className="font-semibold text-white py-1">
                   hamza@email.com
                 </h1>
               </div>
             </div>
             <div className="flex justify-center py-4">
-              <button className="btn btn-primary bg-secondary">
+              <Link to={"/update"} className="btn btn-primary bg-secondary">
                 Update Profile
-              </button>
+              </Link>
             </div>
           </div>
         </div>

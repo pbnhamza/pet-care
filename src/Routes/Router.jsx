@@ -7,6 +7,7 @@ import Services from "../Pages/Services/Services";
 import Profile from "../Pages/Profile/Profile";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Login/Register";
+import UpdateProfile from "../Pages/Profile/UpdateProfile";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         Component: Register,
+      },
+      {
+        path: "/update",
+        Component: UpdateProfile,
       },
     ],
   },
