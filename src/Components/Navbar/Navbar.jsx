@@ -24,7 +24,7 @@ const Navbar = () => {
     <MyContainer>
       <nav className="navbar bg-base-200 shadow-sm py-5 ">
         <div className="navbar-start">
-          <div className="dropdown text-secondary">
+          <div className="dropdown text-secondary z-50">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
