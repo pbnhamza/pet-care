@@ -22,7 +22,7 @@ const Navbar = () => {
   };
   return (
     <MyContainer>
-      <div className="navbar bg-base-200 shadow-sm sticky py-5 ">
+      <nav className="navbar bg-base-200 shadow-sm py-5 ">
         <div className="navbar-start">
           <div className="dropdown text-secondary">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -90,7 +90,7 @@ const Navbar = () => {
             </div>
           )}
         </div>
-      </div>
+      </nav>
     </MyContainer>
   );
 };

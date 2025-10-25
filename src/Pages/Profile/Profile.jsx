@@ -3,6 +3,7 @@ import MyContainer from "../../Components/MyContainer/MyContainer";
 import { Link, Navigate } from "react-router";
 import { AuthContext } from "../../Context/AuthContext";
 import Loader from "../../Components/Loader/Loader";
+import Login from "../Login/Login";
 
 const Profile = () => {
   const { user } = useContext(AuthContext);
@@ -58,7 +59,7 @@ const Profile = () => {
           </div>
         </div>
       ) : (
-        <Loader></Loader>
+        <Login></Login>
       )}
     </MyContainer>
   );

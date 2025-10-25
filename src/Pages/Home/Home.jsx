@@ -4,12 +4,13 @@ import { useLoaderData } from "react-router";
 import PetCard from "../../Components/PetCard/PetCard";
 import Tips from "../../Components/Tips/Tips";
 import Vets from "../../Components/Vets/Vets";
+import Video from "../../Components/video/Video";
 
 const Home = () => {
   const allPets = useLoaderData();
 
   return (
-    <MyContainer className="bg-[#EEEEEE]">
+    <MyContainer className="bg-[#EEEEEE] ">
       <Banner></Banner>
       <div className="pt-10 bg-base-200">
         <div>
@@ -25,6 +26,7 @@ const Home = () => {
       </div>
       <Tips></Tips>
       <Vets></Vets>
+      <Video></Video>
     </MyContainer>
   );
 };
