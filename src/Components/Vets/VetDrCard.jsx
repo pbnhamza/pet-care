@@ -1,7 +1,6 @@
-import React from "react";
-
 const VetDrCard = ({ vets }) => {
   const { image, name, specialty, email, phone } = vets;
+
   return (
     <div className="">
       <div className="  rounded-2xl shadow-lg px-1.5 hover:translate-y-5  transition-transform">

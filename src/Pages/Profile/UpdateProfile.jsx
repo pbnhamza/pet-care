@@ -1,11 +1,32 @@
-import React, { useState } from "react";
-import { FaEye } from "react-icons/fa";
-import { IoEyeOff } from "react-icons/io5";
-import image from "../../assets/login.png";
+import { useContext, useState } from "react";
 import MyContainer from "../../Components/MyContainer/MyContainer";
+import { AuthContext } from "../../Context/AuthContext";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router";
 
 const UpdateProfile = () => {
-  const [show, setShow] = useState(false);
+  const { updateProfileFunc } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const [name, setName] = useState("");
+  const [photo, setPhotos] = useState("");
+
+  const handleUpdate = (e) => {
+    e.preventDefault();
+    updateProfileFunc(name, photo)
+      .then(() => {
+        if (name && photo) {
+          toast.success("data update successful");
+
+          setName("");
+          setPhotos("");
+        }
+      })
+      .catch((e) => {
+        console.log(e);
+        toast.error(e.message);
+      });
+    navigate("/profile");
+  };
   return (
     <MyContainer>
       <div className="flex justify-center items-center">
@@ -16,10 +37,9 @@ const UpdateProfile = () => {
               "linear-gradient(90deg,rgba(42, 151, 155, 0.15) 0%, rgba(11, 148, 68, 0.25) 56%, rgba(83, 237, 198, 0.45) 100%)",
           }}
         >
-          {" "}
           <div className="flex justify-center items-center py-4">
             <img
-              src={image}
+              src={photo}
               className="max-w-sm  w-[150px] h-[150px] rounded-full shadow-2xl"
             />
           </div>
@@ -31,19 +51,10 @@ const UpdateProfile = () => {
                 </button>
                 <input
                   name="name"
+                  onChange={(e) => setName(e.target.value)}
+                  value={name}
                   type="text"
                   placeholder="Your Name"
-                  className="input  join-item text-base-300 w-full"
-                />
-              </div>
-              <div className="join  w-96">
-                <button className="bg-[#8CC63D] join-item w-[100px]">
-                  Email
-                </button>
-                <input
-                  name="email"
-                  type="email"
-                  placeholder="Your Email"
                   className="input  join-item text-base-300 w-full"
                 />
               </div>
@@ -53,14 +64,17 @@ const UpdateProfile = () => {
                   Photo
                 </button>
                 <input
+                  onChange={(e) => setPhotos(e.target.value)}
+                  value={photo}
                   name="photo"
+                  type="text"
                   placeholder="photo URL"
                   className="input input-bordered join-item text-base-300 w-full"
                 />
               </div>
 
               <button
-                type="submit"
+                onClick={handleUpdate}
                 className="btn btn-neutral border-none bg-[#0B9444] p-4"
               >
                 Update Now

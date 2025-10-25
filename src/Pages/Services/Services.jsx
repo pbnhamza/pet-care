@@ -3,6 +3,7 @@ import MyContainer from "../../Components/MyContainer/MyContainer";
 import { useEffect, useState } from "react";
 import ServicesCard from "./ServicesCard";
 import { PropagateLoader } from "react-spinners";
+
 const Services = () => {
   const { id } = useParams();
   const petsCard = useLoaderData();

@@ -1,9 +1,10 @@
-import React from "react";
+import { useContext } from "react";
 import { NavLink } from "react-router";
+import { AuthContext } from "../../Context/AuthContext";
 
 const PetCard = ({ pet }) => {
   const { image, serviceName, rating, price, serviceId } = pet;
-
+  const { user } = useContext(AuthContext);
   return (
     <div>
       <div className=" shadow-sm p-2 rounded-xl space-y-4 hover:scale-105 transition ease-in-out">
@@ -26,7 +27,7 @@ const PetCard = ({ pet }) => {
         </div>
         <div className="flex justify-center">
           <NavLink
-            to={`/services/${serviceId}`}
+            to={user ? `/services/${serviceId}` : "/login"}
             className="btn  bg-secondary text-white"
           >
             View Details

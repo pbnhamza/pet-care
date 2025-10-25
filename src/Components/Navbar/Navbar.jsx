@@ -51,11 +51,7 @@ const Navbar = () => {
             </ul>
           </div>
           <NavLink to={"/"} className="flex justify-between items-center gap-2">
-            <img
-              className="w-[40px] h-[40px] rounded-full"
-              src={logo}
-              alt="logo"
-            />
+            <img className="w-10 h-10 rounded-full" src={logo} alt="logo" />
             <p className="font-bold text-primary  text-xl">Pet Care</p>
           </NavLink>
         </div>
@@ -71,7 +67,7 @@ const Navbar = () => {
             <div className="flex justify-center items-center gap-5">
               <div>
                 <img
-                  className="w-[40px] h-[40px] rounded-full"
+                  className="w-10 h-10 rounded-full"
                   src={user?.photoURL}
                   alt=""
                 />
@@ -87,7 +83,7 @@ const Navbar = () => {
             </div>
           ) : (
             <div className="flex justify-center items-center gap-5">
-              <img className="w-[40px] h-[40px]" src={login} alt="" />
+              <img className="w-10 h-10" src={login} alt="" />
               <NavLink to={"/login"} className="btn bg-secondary text-white">
                 Login
               </NavLink>

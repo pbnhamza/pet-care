@@ -3,11 +3,13 @@ import MainLayouts from "../Layouts/MainLayouts";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home";
 import Loader from "../Components/Loader/Loader";
-import Services from "../Pages/Services/Services";
-import Profile from "../Pages/Profile/Profile";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Login/Register";
 import UpdateProfile from "../Pages/Profile/UpdateProfile";
+import PrivetRoute from "../PrivetRoute/PrivetRoute";
+
+import Profile from "../Pages/Profile/Profile";
+import Services from "../Pages/Services/Services";
 
 const router = createBrowserRouter([
   {
@@ -22,22 +24,31 @@ const router = createBrowserRouter([
         loader: () => fetch("/pets.json"),
       },
       {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
         path: "/services/:id",
-        Component: Services,
+        element: (
+          <PrivetRoute>
+            <Services></Services>
+          </PrivetRoute>
+        ),
         loader: () => fetch("/pets.json"),
       },
       {
         path: "/profile",
-        Component: Profile,
+        element: <Profile></Profile>,
       },
       {
         path: "/login",
-        Component: Login,
+        element: <Login></Login>,
       },
       {
         path: "/register",
         Component: Register,
       },
+
       {
         path: "/update",
         Component: UpdateProfile,
