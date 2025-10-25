@@ -32,7 +32,7 @@ const ServicesCard = ({ card }) => {
           "linear-gradient(90deg,rgba(46, 177, 101, 0.81) 0%, rgba(138, 195, 62, 0.95) 46%, rgba(46, 177, 101, 0.9) 100%)",
       }}
     >
-      <div className=" shadow-lg bg-white justify-between rounded-xl  flex flex-col md:flex-row gap-6  items-center ">
+      <div className=" shadow-lg bg-white justify-between rounded-xl  flex flex-col md:flex-row gap-6  items-center p-4 ">
         <div>
           <figure className="flex justify-center items-center w-[300px] h-[300px] ">
             <img className="rounded-xl w-full h-full " src={image} alt="pets" />

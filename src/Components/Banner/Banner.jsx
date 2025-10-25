@@ -24,7 +24,7 @@ const Banner = () => {
           autoplay={{ delay: 1000, disableOnInteraction: false }}
           loop={true}
           speed={5000}
-          className="h-[480px]"
+          className="h-[480px] z-1"
         >
           <SwiperSlide>
             <img className="w-full h-full object-center" src={slide1} alt="" />
