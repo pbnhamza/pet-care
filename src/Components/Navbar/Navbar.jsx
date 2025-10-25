@@ -48,10 +48,11 @@ const Navbar = () => {
               <MyLink to={"/"}>Home</MyLink>
               <MyLink to={"/services/:id"}>Services</MyLink>
               <MyLink to={"/profile"}>My Profile</MyLink>
+              <MyLink to={"/about"}>About us</MyLink>
             </ul>
           </div>
-          <NavLink to={"/"} className="flex justify-between items-center gap-2">
-            <img className="w-10 h-10 rounded-full" src={logo} alt="logo" />
+          <NavLink to={"/"} className="flex justify-between items-center gap-1">
+            <img className="w-12 h-12 rounded-full" src={logo} alt="logo" />
             <p className="font-bold text-primary  text-xl">Pet Care</p>
           </NavLink>
         </div>
@@ -60,6 +61,7 @@ const Navbar = () => {
             <MyLink to={"/"}>Home</MyLink>
             <MyLink to={"/services/:id"}>Services</MyLink>
             <MyLink to={"/profile"}>My Profile</MyLink>
+            <MyLink to={"/about"}>About us</MyLink>
           </ul>
         </div>
         <div className="navbar-end flex gap-2 items-center ">
@@ -67,9 +69,9 @@ const Navbar = () => {
             <div className="flex justify-center items-center gap-5">
               <div>
                 <img
-                  className="w-10 h-10 rounded-full"
+                  className="w-12 h-12 rounded-full"
                   src={user?.photoURL}
-                  alt=""
+                  alt="#"
                 />
               </div>
               <div className="flex justify-center py-4">
@@ -83,7 +85,7 @@ const Navbar = () => {
             </div>
           ) : (
             <div className="flex justify-center items-center gap-5">
-              <img className="w-10 h-10" src={login} alt="" />
+              <img className="w-12 h-12 rounded-full" src={login} alt="" />
               <NavLink to={"/login"} className="btn bg-secondary text-white">
                 Login
               </NavLink>

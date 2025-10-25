@@ -27,8 +27,9 @@ const Banner = () => {
           className="h-[480px]"
         >
           <SwiperSlide>
-            <img className="w-full h-full" src={slide1} alt="" />
+            <img className="w-full h-full object-center" src={slide1} alt="" />
           </SwiperSlide>
+
           <SwiperSlide>
             <img className="w-full h-full" src={slide2} alt="" />
           </SwiperSlide>

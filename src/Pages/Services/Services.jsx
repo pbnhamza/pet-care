@@ -22,7 +22,7 @@ const Services = () => {
         }}
       >
         {cards.length === 0 ? (
-          <div className="flex justify-center items-center min-h-screen ">
+          <div className="flex justify-center items-center min-h-[calc(100vh-310px)] ">
             <div>
               <PropagateLoader
                 className="text-center py-8"

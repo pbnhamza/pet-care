@@ -10,6 +10,7 @@ import PrivetRoute from "../PrivetRoute/PrivetRoute";
 
 import Profile from "../Pages/Profile/Profile";
 import Services from "../Pages/Services/Services";
+import About from "../Pages/About";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
       {
         path: "/update",
         Component: UpdateProfile,
+      },
+      {
+        path: "/about",
+        Component: About,
       },
     ],
   },

@@ -1,16 +1,18 @@
-# React + Vite
+# Project Name: Pet Care
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Purpose:
 
-Currently, two official plugins are available:
+The purpose of this project is to create a pet care website that helps pet owners take better care of their pets during the winter season.A pet care project's purpose is to provide a service or develop a product for the well-being of pets, driven by the human-animal bond and the growing need for assistance with pet management
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## live URL:
 
-## React Compiler
+## key features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+User Authentication:firebase
+Responsive Design:Tailwind CSS
+Dynamic Banner:Swiper Slider
+Toast Notifications:react-toastify
 
-## Expanding the ESLint configuration
+## npm packages:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+react, react-router-dom, react-router, Tailwind , swiper, react-icons, react-toastify

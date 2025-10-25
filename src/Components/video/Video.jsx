@@ -11,16 +11,18 @@ const Video = () => {
       }}
     >
       <div>
-        <h1 className="text-secondary text-2xl font-semibold py-5">Pet Care</h1>
+        <h1 className="text-secondary text-2xl font-semibold py-5">
+          Pet Care Video
+        </h1>
       </div>
       <iframe
-        className="w-full px-10 rounded-2xl"
+        className="w-full px-10 rounded-lg shadow-2xl"
         width="560"
         height="500"
         src="https://www.youtube.com/embed/ne5VEkRrpw4?si=lOZOnEg4CWBvwBF5"
         title="YouTube video player"
         frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture;"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen
       ></iframe>
