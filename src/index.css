@@ -19,3 +19,18 @@
 * {
   font-family: "Poppins";
 }
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  overflow-x: visible !important;
+  overflow-y: auto;
+}
+
+/* If you're using a layout wrapper like this: */
+#root,
+[data-theme] {
+  overflow: visible !important;
+}

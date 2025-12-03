@@ -1,34 +1,40 @@
-import { useContext } from "react";
 import { NavLink } from "react-router";
 import { AuthContext } from "../../Context/AuthContext";
+import { FaStar } from "react-icons/fa6";
 
 const PetCard = ({ pet }) => {
   const { image, serviceName, rating, price, serviceId } = pet;
-  const { user } = useContext(AuthContext);
+
   return (
     <div>
       <div className=" shadow-sm p-2 rounded-xl space-y-4 hover:scale-105 transition ease-in-out">
-        <figure className=" h-[300px]">
+        <figure className=" h-[200px] w-full ">
           <img className="rounded-xl w-full h-full " src={image} alt="pets" />
         </figure>
-        <div className="">
+        <div className=" w-full">
           <h2 className=" text-center text-2xl font-semibold py-2">
             {serviceName}
           </h2>
 
-          <div className="flex justify-between items-center px-5">
+          <div className="">
             <div className="text-lg font-semibold text-accent">
               Price: <span>${price}</span>
             </div>
-            <div className="text-lg font-semibold text-accent">
-              Rating:{rating}
+            <div className="flex gap-5 items-center text-lg font-semibold text-accent">
+              <span>Rating: {rating} </span>
+              <span className="flex items-center">
+                <FaStar color="#FFB600" />
+                <FaStar color="#FFB600" />
+                <FaStar color="#FFB600" />
+                <FaStar color="#FFB600" />
+              </span>
             </div>
           </div>
         </div>
         <div className="flex justify-center">
           <NavLink
-            to={user ? `/services/${serviceId}` : "/login"}
-            className="btn  bg-secondary text-white"
+            to={`/services/${serviceId}`}
+            className="btn rounded-b-2xl w-full bg-secondary text-white"
           >
             View Details
           </NavLink>

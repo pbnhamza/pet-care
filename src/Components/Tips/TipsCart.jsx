@@ -11,11 +11,15 @@ const TipsCart = ({ tips }) => {
             "linear-gradient(90deg,rgba(42, 151, 155, 0.5) 0%, rgba(11, 148, 68, 0.25) 50%, rgba(83, 237, 198, 0.45) 100%)",
         }}
       >
-        <figure className="pt-1.5">
-          <img src={image} alt="pets" className="rounded-xl " />
+        <figure className="pt-1.5    ">
+          <img
+            src={image}
+            alt="pets"
+            className="rounded-xl w-full h-[250px] object-cover object-center "
+          />
         </figure>
         <div className="items-center text-center ">
-          <h2 className="text-secondary text-xl font-semibold py-1">{title}</h2>
+          <h2 className=" text-xl font-semibold py-1 ">{title}</h2>
           <div className="bg-white rounded-2xl p-2">
             <p className="text-justify ">{details}</p>
           </div>

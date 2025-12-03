@@ -21,8 +21,8 @@ const Navbar = () => {
       });
   };
   return (
-    <MyContainer>
-      <nav className="navbar bg-base-200 shadow-sm py-5 ">
+    <header className="fixed top-0  z-50 w-full bg-base-200 shadow-sm ">
+      <nav className="navbar bg-base-200 shadow-sm px-8">
         <div className="navbar-start">
           <div className="dropdown text-secondary z-50">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -46,8 +46,16 @@ const Navbar = () => {
               className="menu  font-semibold menu-sm dropdown-content bg-secondary text-white z-1 mt-3 w-[100px] p-2 shadow"
             >
               <MyLink to={"/"}>Home</MyLink>
-              <MyLink to={"/services/:id"}>Services</MyLink>
-              <MyLink to={"/profile"}>My Profile</MyLink>
+              <MyLink to={"/all-services"}>All Services</MyLink>
+              {user ? (
+                <>
+                  <MyLink to={"/services/:id"}>Services</MyLink>
+                  <MyLink to={"/profile"}>My Profile</MyLink>
+                </>
+              ) : (
+                ""
+              )}
+
               <MyLink to={"/about"}>About us</MyLink>
             </ul>
           </div>
@@ -59,8 +67,15 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="gap-4 menu-horizontal px-1 text-secondary font-semibold">
             <MyLink to={"/"}>Home</MyLink>
-            <MyLink to={"/services/:id"}>Services</MyLink>
-            <MyLink to={"/profile"}>My Profile</MyLink>
+            <MyLink to={"/all-services"}>All Services</MyLink>
+            {user ? (
+              <>
+                <MyLink to={"/services/:id"}>Services</MyLink>
+                <MyLink to={"/profile"}>My Profile</MyLink>
+              </>
+            ) : (
+              ""
+            )}
             <MyLink to={"/about"}>About us</MyLink>
           </ul>
         </div>
@@ -93,7 +108,7 @@ const Navbar = () => {
           )}
         </div>
       </nav>
-    </MyContainer>
+    </header>
   );
 };
 

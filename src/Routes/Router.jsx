@@ -11,6 +11,7 @@ import PrivetRoute from "../PrivetRoute/PrivetRoute";
 import Profile from "../Pages/Profile/Profile";
 import Services from "../Pages/Services/Services";
 import About from "../Pages/About";
+import AllServices from "../Components/All-Servises/AllServices";
 
 const router = createBrowserRouter([
   {
@@ -29,17 +30,22 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
+        path: "/all-services",
+        element: <AllServices></AllServices>,
+        loader: () => fetch("/pets.json"),
+      },
+      {
         path: "/services/:id",
-        element: (
-          <PrivetRoute>
-            <Services></Services>
-          </PrivetRoute>
-        ),
+        element: <Services></Services>,
         loader: () => fetch("/pets.json"),
       },
       {
         path: "/profile",
-        element: <Profile></Profile>,
+        element: (
+          <PrivetRoute>
+            <Profile></Profile>
+          </PrivetRoute>
+        ),
       },
       {
         path: "/login",

@@ -6,7 +6,7 @@ import Navbar from "../Components/Navbar/Navbar";
 const MainLayouts = () => {
   return (
     <div>
-      <header>
+      <header className="pb-16">
         <Navbar></Navbar>
       </header>
       <main className="min-h-[calc(100vh-316px)]">

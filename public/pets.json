@@ -1,7 +1,7 @@
 [
   {
     "serviceId": 1,
-    "serviceName": "Winter Coat Fitting for Dogs",
+    "serviceName": "Winter Fitting for Dogs",
     "providerName": "PawCare Studio",
     "providerEmail": "info@pawcare.com",
     "price": 125,
@@ -61,7 +61,7 @@
   },
   {
     "serviceId": 6,
-    "serviceName": "Pet Photography Session",
+    "serviceName": "Pet Photography",
     "providerName": "PawsInFocus Studio",
     "providerEmail": "photos@pawsinfocus.com",
     "price": 160,
@@ -73,7 +73,7 @@
   },
   {
     "serviceId": 7,
-    "serviceName": "Custom Pet Bed Design",
+    "serviceName": "Pet Bed Design",
     "providerName": "CozyPet Creations",
     "providerEmail": "beds@cozypet.com",
     "price": 155,
@@ -133,7 +133,7 @@
   },
   {
     "serviceId": 12,
-    "serviceName": "Pet Nutrition Consultation",
+    "serviceName": "Pet Nutrition",
     "providerName": "HealthyPaws Nutrition",
     "providerEmail": "diet@healthypaws.com",
     "price": 165,
