@@ -5,6 +5,7 @@ const About = () => {
   return (
     <MyContainer>
       <div
+        className="pt-5"
         style={{
           background:
             "linear-gradient(90deg,rgba(46, 177, 101, 0.61) 0%, rgba(138, 195, 62, 0.55) 46%, rgba(46, 177, 101, 0.18) 100%)",
@@ -49,22 +50,22 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 py-5 px-5">
-          <div className="p-6 bg-primary rounded-2xl shadow hover:shadow-lg transition text-center">
+        <div className="grid grid-cols-1 text-white md:grid-cols-3 lg:grid-cols-3 gap-5 py-5 px-5">
+          <div className="p-6 t  bg-[#0B9444] rounded-2xl shadow hover:shadow-lg transition text-center">
             <h2 className="text-xl font-bold mb-2">Expert team</h2>
-            <p className="text-accent">
+            <p className="text-white">
               Our experienced vets and technicians are always on hand.
             </p>
           </div>
-          <div className="p-6 bg-primary rounded-2xl shadow hover:shadow-lg transition text-center">
+          <div className="p-6 bg-[#0B9444] rounded-2xl shadow hover:shadow-lg transition text-center">
             <h2 className="text-xl font-bold mb-2">Affordable care</h2>
-            <p className="text-accent">
+            <p className="text-white">
               We ensure the best pet care at affordable cost.
             </p>
           </div>
-          <div className="p-6 bg-primary rounded-2xl shadow-2xl transition text-center">
+          <div className="p-6 bg-[#0B9444] rounded-2xl shadow-2xl transition text-center">
             <h2 className="text-xl font-bold mb-2">Safe Environment care</h2>
-            <p className="text-accent">
+            <p className="text-white">
               Our center is completely safe and clean.
             </p>
           </div>

@@ -12,7 +12,7 @@ const Profile = () => {
     <MyContainer>
       {user ? (
         <div
-          className="flex justify-center items-center flex-col gap-5 py-4 "
+          className="flex justify-center items-center flex-col gap-5 py-4 pt-10 "
           style={{
             background:
               "linear-gradient(90deg,rgba(42, 151, 155, 0.5) 0%, rgba(11, 148, 68, 0.25) 60%, rgba(83, 237, 198, 0.45) 100%)",

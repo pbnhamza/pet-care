@@ -4,7 +4,7 @@ const promotions = [
     id: 1,
     title: "Winter Special Grooming",
     description: "Get 30% off on all pet grooming services this winter!",
-    image: "https://i.ibb.co.com/Qjf0cJSk/Dog-Grooming-Session.jpg",
+    image: "https://i.ibb.co.com/gLZSbPzr/Pet-Massage-Therapy.jpg",
     buttonText: "Book Now",
     link: "#",
   },
@@ -30,7 +30,7 @@ const Promotional = () => {
         {promotions.map((promo) => (
           <div
             key={promo.id}
-            className="relative rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 bg-gray-800"
+            className="relative rounded-lg overflow-hidden hover:shadow-2xl transition-shadow"
           >
             <img
               src={promo.image}
